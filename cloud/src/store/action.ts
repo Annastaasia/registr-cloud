@@ -1,23 +1,16 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { setupListeners } from '@reduxjs/toolkit/dist/query'
-import { containerSlice } from './container/container.slice'
-import { modalSlice } from './modal/modal.slice'
-import { userSlice } from './user/user.slice'
-import { userApi } from './user/user.api'
+import { bindActionCreators } from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
+import { containerActions } from '../store/container.slice';
+import { modalActions } from '../store/modal.slice';
+import { userActions } from '../store/user.slice';
 
-const rootReducer = combineReducers({
-  [userApi.reducerPath]: userApi.reducer,
-  modal: modalSlice.reducer,
-  user: userSlice.reducer,
-  container: containerSlice.reducer,
-})
+const actions = {
+  ...modalActions,
+  ...userActions,
+  ...containerActions,
+}
 
-export const store = configureStore({
-  reducer: rootReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(userApi.middleware),
-})
-
-setupListeners(store.dispatch)
-
-export type RootState = ReturnType<typeof store.getState>
+export const useActions = () => {
+  const dispatch = useDispatch()
+  return bindActionCreators(actions, dispatch)
+}

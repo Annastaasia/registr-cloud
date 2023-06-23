@@ -1,14 +1,15 @@
+import React from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { useAppSelector } from "../../hooks/selector";
 import { useActions } from "../../store/action";
-// import { InfoInputs, MaskComponent } from "../../shared";
-// import { SCHEMA_HOME_PAGE } from "../../assets/const/schemas";
-// import { folder_icon } from "../../assets/images";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import { USER_LINKS } from "../../assets/const/user_links";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-// import Input from "@mui/material/Input";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { VALID_FORM } from "../../commons/validform/ValidForm";
+import { LINKS } from "../../commons/links/Links";
+// import { InfoInputs, MaskComponent } from "../../shared";
+// import { folder_icon } from "../../assets/images";
+import Input from "@mui/material/Input";
 import "./home.scss";
 
 const Main: React.FC = () => {
@@ -16,7 +17,6 @@ const Main: React.FC = () => {
   const location = useLocation();
 
   const { phone, email } = useAppSelector((state) => state.user);
-
   const { setPhone, setEmail, setCurrentPage } = useActions();
 
   const {
@@ -24,7 +24,7 @@ const Main: React.FC = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(SCHEMA_HOME_PAGE),
+    resolver: yupResolver(VALID_FORM),
     defaultValues: {
       email: email,
       phone: phone,
@@ -53,17 +53,17 @@ const Main: React.FC = () => {
           <p>Руслан Шарифуллин</p>
 
           <div className="user-links">
-            <Link to={USER_LINKS.telegram} target="_blank" className="link">
+            <Link to={LINKS.telegram} target="_blank" className="link">
               <img src={folder_icon} alt="telegram" />
               <p>Telegram</p>
             </Link>
 
-            <Link to={USER_LINKS.github} target="_blank" className="link">
+            <Link to={LINKS.github} target="_blank" className="link">
               <img src={folder_icon} alt="github" />
               <p>Github</p>
             </Link>
 
-            <Link to={USER_LINKS.hh} target="_blank" className="link">
+            <Link to={LINKS.hh} target="_blank" className="link">
               <img src={folder_icon} alt="resume" />
               <p>Resume</p>
             </Link>
