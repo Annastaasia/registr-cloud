@@ -8,7 +8,7 @@ interface IPages {
     [key: string]: string[]
   }
   
-  interface IBackNextButtons {
+  interface IButtons {
     pathToBack: string
     pathToNext?: string
     isDone?: boolean
@@ -54,7 +54,7 @@ interface IPages {
     register: any
   }
   
-  interface IInfoInputs {
+  interface IInputs {
     children: ReactNode
   }
   
@@ -67,7 +67,7 @@ interface IPages {
     label: string
   }
   
-  interface USER_LINKS {
+  interface LINKS {
     telegram: string
     github: string
     hh: string
