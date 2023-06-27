@@ -1,8 +1,9 @@
-import { Main } from "../../pages";
+import Main from "../../pages/Main/Main";
+// import Step1 from "../../pages/Step1/Step1";
 import { useAppSelector } from "../../hooks/selector";
 import { Routes, Route } from "react-router-dom";
 
-const Pages: React.FC = () => {
+const AllPages: React.FC = () => {
   const { currentPage } = useAppSelector((state) => state.container);
 
   return (
@@ -15,7 +16,7 @@ const Pages: React.FC = () => {
     >
       <Routes>
         <Route path="/registr/" element={<Main />} />
-        <Route path="/registr/first-level" element={<Step1 />} />
+        {/* <Route path="/registr/first-level" element={<Step1 />} /> */}
         {/* <Route
           path="/registr/second-level"
           element={<SecondLevel />}
@@ -26,4 +27,4 @@ const Pages: React.FC = () => {
   );
 };
 
-export default Pages;
+export default AllPages;

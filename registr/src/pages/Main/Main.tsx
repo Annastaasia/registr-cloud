@@ -7,8 +7,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { VALID_FORM } from "../../commons/validform/ValidForm";
 import { LINKS } from "../../commons/links/Links";
-// import { InfoInputs, MaskComponent } from "../../shared";
-// import { folder_icon } from "../../assets/images";
+import { Inputs, PhoneMask } from "../../commons";
+import { folder_icon } from "../../assets/images";
 import Input from "@mui/material/Input";
 import "./home.scss";
 
@@ -46,11 +46,11 @@ const Main: React.FC = () => {
     <>
       <div className="user-header">
         <div className="user-avatar">
-          <div className="avatar">РШ</div>
+          <div className="avatar">АВ</div>
         </div>
 
         <div className="user-info">
-          <p>Руслан Шарифуллин</p>
+          <p>Анастасия Шитенкова</p>
 
           <div className="user-links">
             <Link to={LINKS.telegram} target="_blank" className="link">
@@ -71,14 +71,14 @@ const Main: React.FC = () => {
         </div>
       </div>
 
-      <InfoInputs>
+      <Inputs>
         <form onSubmit={handleSubmit(onSubmit)}>
           <span>
             <p>Номер телефона</p>
             <Input
               {...register("phone")}
               placeholder="+7 (999) 999-99-99"
-              inputComponent={MaskComponent}
+              inputComponent={PhoneMask}
             />
 
             {errors.phone && <p className="error">{errors.phone.message}</p>}
@@ -95,7 +95,7 @@ const Main: React.FC = () => {
             <button type="submit">Начать</button>
           </div>
         </form>
-      </InfoInputs>
+      </Inputs>
     </>
   );
 };
