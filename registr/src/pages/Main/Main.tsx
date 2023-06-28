@@ -10,7 +10,7 @@ import { LINKS } from "../../commons/links/Links";
 import { Inputs, PhoneMask } from "../../commons";
 import { folder_icon } from "../../assets/images";
 import Input from "@mui/material/Input";
-import "./home.scss";
+import "./main.module.scss";
 
 const Main: React.FC = () => {
   const navigate = useNavigate();

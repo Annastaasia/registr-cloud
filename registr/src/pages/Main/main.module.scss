@@ -1,0 +1,131 @@
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  
+  .user-header {
+    height: 16%;
+    border-radius: 12px 12px 0px 0px;
+    display: flex;
+    border-bottom: 0.1px solid #8a858527;
+    margin-right: 24px;
+    margin-left: 24px;
+    align-items: center;
+  
+    .user-avatar {
+      .avatar {
+        background: #d5e4f7;
+        height: 80px;
+        width: 80px;
+        border-radius: 99%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        font-family: 'SB Sans Text Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 52px;
+  
+        @include tablet {
+          height: 60px;
+          width: 60px;
+          font-size: 25px;
+        }
+      }
+    }
+  
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      padding-left: 24px;
+  
+      @include tablet {
+        padding-left: 15px;
+      }
+  
+      p {
+        font-family: 'SB Sans Interface';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 26px;
+  
+        @include tablet {
+          font-size: 16px;
+        }
+      }
+  
+      .user-links {
+        display: flex;
+        gap: 15px;
+        padding-top: 10px;
+  
+        @include tablet {
+          gap: 5px;
+        }
+  
+        .link {
+          display: flex;
+          gap: 7px;
+          align-items: center;
+          cursor: pointer;
+          text-decoration: none;
+          color: inherit;
+  
+          @include tablet {
+            gap: 4px;
+          }
+  
+          &:visited {
+            color: white;
+          }
+  
+          &:hover {
+            text-decoration: none;
+            color: inherit;
+          }
+  
+          p {
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #5558fa;
+  
+            @include tablet {
+              font-size: 10px;
+            }
+          }
+        }
+  
+        img {
+          height: 11.2px;
+          width: 12.8px;
+        }
+      }
+    }
+  }
+  
+  .start-button {
+    padding-top: 40px;
+  
+    button {
+      background: #5558fa;
+      border: none;
+      height: 44px;
+      width: 79px;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+  
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+  
