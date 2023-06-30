@@ -1,7 +1,7 @@
-import "./infoinputs.module.scss";
+import style from "./infoinputs.module.scss";
 
 const Inputs: React.FC<InfoInputs> = ({ children }) => {
-  return <div className="info-inputs">{children}</div>;
+  return <div className={style.info_inputs}>{children}</div>;
 };
 
 export default Inputs;

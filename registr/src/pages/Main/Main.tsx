@@ -11,7 +11,7 @@ import InfoInputs from "../../commons/inputs/InfoInputs";
 import PhoneMask from "../../commons/phonemask/PhoneMask";
 import { folder_icon } from "../../assets/images";
 import Input from "@mui/material/Input";
-import "./main.module.scss";
+import style from "./main.module.scss";
 
 const Main: React.FC = () => {
   const navigate = useNavigate();
@@ -45,26 +45,26 @@ const Main: React.FC = () => {
 
   return (
     <>
-      <div className="user-header">
-        <div className="user-avatar">
-          <div className="avatar">АВ</div>
+      <div className={style.user_header}>
+        <div className={style.user_avatar}>
+          <div className={style.avatar}>АВ</div>
         </div>
 
-        <div className="user-info">
-          <p>Анастасия Шитенкова</p>
+        <div className={style.user_info}>
+          <p className={style.user_p}>Анастасия Шитенкова</p>
 
-          <div className="user-links">
-            <Link to={LINKS.telegram} target="_blank" className="link">
+          <div className={style.user_links}>
+            <Link to={LINKS.telegram} target="_blank" className={style.link}>
               <img src={folder_icon} alt="telegram" />
               <p>Telegram</p>
             </Link>
 
-            <Link to={LINKS.github} target="_blank" className="link">
+            <Link to={LINKS.github} target="_blank" className={style.link}>
               <img src={folder_icon} alt="github" />
               <p>Github</p>
             </Link>
 
-            <Link to={LINKS.hh} target="_blank" className="link">
+            <Link to={LINKS.hh} target="_blank" className={style.link}>
               <img src={folder_icon} alt="resume" />
               <p>Resume</p>
             </Link>
@@ -75,7 +75,7 @@ const Main: React.FC = () => {
       <InfoInputs>
         <form onSubmit={handleSubmit(onSubmit)}>
           <span>
-            <p>Номер телефона</p>
+            <p className={style.p_number}>Номер телефона</p>
             <Input
               {...register("phone")}
               placeholder="+7 (999) 999-99-99"
@@ -89,11 +89,15 @@ const Main: React.FC = () => {
             <p>Email</p>
             <Input {...register("email")} placeholder="example@mail.ru" />
 
-            {errors.email && <p className="error">{errors.email.message}</p>}
+            {errors.email && (
+              <p className={style.error}>{errors.email.message}</p>
+            )}
           </span>
 
-          <div className="start-button">
-            <button type="submit">Начать</button>
+          <div className={style.start_button}>
+            <button type="submit" className={style.button}>
+              Начать
+            </button>
           </div>
         </form>
       </InfoInputs>
