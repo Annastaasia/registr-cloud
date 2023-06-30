@@ -35,7 +35,7 @@ const Main: React.FC = () => {
     setEmail(data.email);
     setPhone(data.phone);
 
-    navigate("/front-cc-project/first-level");
+    navigate("/registr/step1");
   };
 
   useEffect(() => {

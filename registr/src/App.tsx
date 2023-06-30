@@ -1,9 +1,7 @@
-import "./App.css";
-// import Pages from './pages/Pages'
-import "../src/styles/App.scss";
+import AllPages from "./AllPages";
 
 const App: React.FC = () => {
-  return <div className="wrapper">{/* <Pages /> */}</div>;
+  return <div className="wrapper">{<AllPages />}</div>;
 };
 
 export default App;

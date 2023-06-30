@@ -8,7 +8,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useActions } from "../../store/action";
 import { useForm } from "react-hook-form";
 import Input from "@mui/material/Input";
-import "./firstLevel.scss";
+import "./step1.module.scss";
 
 const FirstLevel: React.FC = () => {
   const { nickname, name, surname, sex } = useAppSelector(
@@ -125,8 +125,8 @@ const FirstLevel: React.FC = () => {
       </div>
 
       <Buttons
-        pathToBack={"/front-cc-project/"}
-        pathToNext={"/front-cc-project/second-level"}
+        pathToBack={"/registr/"}
+        pathToNext={"/registr/step2"}
         isFormCompleted={isFormCompleted}
       />
     </div>

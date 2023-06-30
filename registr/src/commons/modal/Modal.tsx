@@ -1,6 +1,6 @@
 import { useAppSelector } from "../../hooks/selector";
 import { useActions } from "../../store/action";
-import "./modal.scss";
+import "./modal.module.scss";
 
 const Modal: React.FC<IModal> = ({ children }) => {
   const { isModalOpen } = useAppSelector((state) => state.modal);
