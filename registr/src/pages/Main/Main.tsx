@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { useAppSelector } from "../../hooks/selector";
 import { useActions } from "../../store/action";
@@ -7,7 +7,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { VALID_FORM } from "../../commons/validform/ValidForm";
 import { LINKS } from "../../commons/links/Links";
-import { Inputs, PhoneMask } from "../../commons";
+import Inputs from "../../commons/inputs/Inputs";
+import PhoneMask from "../../commons/phonemask/PhoneMask";
 import { folder_icon } from "../../assets/images";
 import Input from "@mui/material/Input";
 import "./main.module.scss";

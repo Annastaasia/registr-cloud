@@ -3,18 +3,18 @@ import { useLocation } from 'react-router-dom';
 
 export const pagePaths: IPages[] = [
   {
-    path: '/registr/first-level',
-    label: 'first_level',
+    path: '/registr/step1',
+    label: 'step1',
     percentage: 0,
   },
   {
-    path: '/registr/second-level',
-    label: 'second_level',
+    path: '/registr/step2',
+    label: 'step2',
     percentage: 50,
   },
   {
-    path: '/registr/third-level',
-    label: 'third_level',
+    path: '/registr/step3',
+    label: 'step3',
     percentage: 100,
   },
 ]

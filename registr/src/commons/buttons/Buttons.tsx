@@ -15,7 +15,7 @@ const Buttons: React.FC<IButtons> = ({
   const [isSending, setIsSending] = useState<boolean>(true);
 
   useEffect(() => {
-    if (location.pathname === "/front-cc-project/about") {
+    if (location.pathname === "/registr/about") {
       setIsSending(true);
       return;
     }
