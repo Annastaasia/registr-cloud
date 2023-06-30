@@ -54,7 +54,7 @@ interface IPages {
     register: any
   }
   
-  interface IInputs {
+  interface InfoInputs {
     children: ReactNode
   }
   

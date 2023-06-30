@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Select, { SingleValue } from "react-select";
-import { Buttons, Inputs, ProgressBar } from "../../commons";
+import { Buttons, InfoInputs, ProgressBar } from "../../commons";
 import { SCHEMA_FIRST_LEVEL_PAGE } from "../../commons/const/schemas";
 import { useAppSelector } from "../../hooks/selector";
 import { selectOptions } from "../../commons/const/select";
@@ -76,7 +76,7 @@ const FirstLevel: React.FC = () => {
       <ProgressBar />
 
       <div className="name-surname-sex-inputs">
-        <Inputs>
+        <InfoInputs>
           <form onSubmit={handleSubmit(onSubmit)}>
             <span>
               <p>Nickname</p>
@@ -121,7 +121,7 @@ const FirstLevel: React.FC = () => {
               <button type="submit">Сохранить</button>
             </div>
           </form>
-        </Inputs>
+        </InfoInputs>
       </div>
 
       <Buttons

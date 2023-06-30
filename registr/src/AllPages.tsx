@@ -17,7 +17,7 @@ const AllPages: React.FC = () => {
       }
     >
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/registr/" element={<Main />} />
         <Route path="/registr/step1" element={<Step1 />} />
         <Route path="/registr/step2" element={<Step2 />} />
         <Route path="/registr/step3" element={<Step3 />} />

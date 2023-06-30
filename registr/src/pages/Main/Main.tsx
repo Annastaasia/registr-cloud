@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { VALID_FORM } from "../../commons/validform/ValidForm";
 import { LINKS } from "../../commons/links/Links";
-import Inputs from "../../commons/inputs/Inputs";
+import InfoInputs from "../../commons/inputs/InfoInputs";
 import PhoneMask from "../../commons/phonemask/PhoneMask";
 import { folder_icon } from "../../assets/images";
 import Input from "@mui/material/Input";
@@ -72,7 +72,7 @@ const Main: React.FC = () => {
         </div>
       </div>
 
-      <Inputs>
+      <InfoInputs>
         <form onSubmit={handleSubmit(onSubmit)}>
           <span>
             <p>Номер телефона</p>
@@ -96,7 +96,7 @@ const Main: React.FC = () => {
             <button type="submit">Начать</button>
           </div>
         </form>
-      </Inputs>
+      </InfoInputs>
     </>
   );
 };
