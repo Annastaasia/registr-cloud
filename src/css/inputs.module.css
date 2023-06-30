@@ -1,0 +1,26 @@
+.info-inputs {
+  margin-left: 24px;
+}
+.info-inputs input {
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 12px 14px;
+  outline: 1px solid #d3d1d1;
+  border-radius: 4px;
+}
+.info-inputs input:hover {
+  outline-color: #000;
+}
+.info-inputs input:focus {
+  outline: 2px solid #5558fa;
+}
+.info-inputs span p {
+  padding-top: 14px;
+  padding-bottom: 10px;
+}
+.info-inputs .error {
+  padding-top: 8px;
+  color: red;
+  padding-bottom: 0px;
+}/*# sourceMappingURL=inputs.module.css.map */

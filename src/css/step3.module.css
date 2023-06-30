@@ -1,0 +1,35 @@
+.about-wrapper {
+  position: relative;
+}
+.about-wrapper .about-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  margin-right: 110px;
+  margin-left: 86px;
+  padding-left: 24px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .about-wrapper .about-section {
+    margin-left: 18px;
+    width: calc(100% - 80px);
+  }
+}
+.about-wrapper .about-section p {
+  padding-bottom: 8px;
+}
+.about-wrapper .about-section textarea {
+  border: 1px solid #d3d1d1;
+  resize: vertical;
+  outline: none;
+  background: none;
+  height: 84px;
+  padding-left: 10px;
+}
+.about-wrapper .about-section span {
+  position: absolute;
+  right: 5px;
+  bottom: -30px;
+  color: #666;
+}/*# sourceMappingURL=step3.module.css.map */

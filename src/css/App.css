@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  font-family: "SB Sans Interface";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+}
+
+::-webkit-scrollbar-track {
+  background: #e7e6e6;
+}
+
+.MuiInput-underline:before,
+.MuiInput-underline:after {
+  border-bottom: none !important;
+}
+
+.MuiInput-root {
+  width: 40%;
+}
+@media screen and (max-width: 768px) {
+  .MuiInput-root {
+    width: 80%;
+  }
+}
+
+.wrapper {
+  background: rgb(244, 244, 245);
+  height: 100vh;
+  width: 100vw;
+}
+.wrapper .main-container {
+  background: rgb(255, 255, 255);
+  position: fixed;
+  width: 80%;
+  height: 75%;
+  border-radius: 12px;
+  overflow-y: auto;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.wrapper .main-container.high {
+  height: 90%;
+}
+.wrapper .main-container .save-form-button {
+  padding-top: 40px;
+}
+.wrapper .main-container .save-form-button button {
+  background: #5558fa;
+  border: none;
+  height: 44px;
+  width: 79px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.wrapper .main-container .save-form-button button:hover {
+  opacity: 0.9;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,43 @@
+.progress-bar {
+  position: relative;
+  background: #ebebeb;
+  height: 8px;
+  margin-top: 66px;
+  margin-right: 110px;
+  margin-left: 110px;
+}
+@media screen and (max-width: 768px) {
+  .progress-bar {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}
+.progress-bar .progress {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: #5558fa;
+  border-radius: 100px;
+}
+.progress-bar .levels {
+  position: absolute;
+  top: -4px;
+  width: 100%;
+}
+.progress-bar .levels .dots {
+  display: flex;
+  justify-content: space-between;
+}
+.progress-bar .levels .numbers {
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.progress-bar .levels .numbers p {
+  font-family: "SB Sans Interface";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5558fa;
+}/*# sourceMappingURL=progressbar.module.css.map */
