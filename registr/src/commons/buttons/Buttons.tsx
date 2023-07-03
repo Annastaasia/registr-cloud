@@ -15,7 +15,7 @@ const Buttons: React.FC<IButtons> = ({
   const [isSending, setIsSending] = useState<boolean>(true);
 
   useEffect(() => {
-    if (location.pathname === "/registr/about") {
+    if (location.pathname === "/registr-cloud-cloud/about") {
       setIsSending(true);
       return;
     }

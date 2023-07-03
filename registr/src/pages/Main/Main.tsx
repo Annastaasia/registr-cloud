@@ -36,7 +36,7 @@ const Main: React.FC = () => {
     setEmail(data.email);
     setPhone(data.phone);
 
-    navigate("/registr/step1");
+    navigate("/registr-cloud/step1");
   };
 
   useEffect(() => {

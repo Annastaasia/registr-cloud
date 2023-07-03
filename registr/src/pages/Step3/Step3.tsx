@@ -33,7 +33,7 @@ const Step3: React.FC = () => {
 
   const handleDone = () => {
     setIsModalOpen(false);
-    navigate("/registr");
+    navigate("/registr-cloud");
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -98,7 +98,7 @@ const Step3: React.FC = () => {
       </div>
 
       <Buttons
-        pathToBack={"/registr/step2"}
+        pathToBack={"/registr-cloud/step2"}
         isDone={true}
         isFormCompleted={isFormCompleted}
         startSendProcess={startSendProcess}

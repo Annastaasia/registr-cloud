@@ -129,8 +129,8 @@ const Step1: React.FC = () => {
       </div>
 
       <Buttons
-        pathToBack={"/registr/"}
-        pathToNext={"/registr/step2"}
+        pathToBack={"/registr-cloud/"}
+        pathToNext={"/registr-cloud/step2"}
         isFormCompleted={isFormCompleted}
       />
     </div>

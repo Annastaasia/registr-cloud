@@ -11,16 +11,17 @@ const AllPages: React.FC = () => {
   return (
     <div
       className={
-        currentPage === "/registr/" || currentPage === "/registr/step3"
+        currentPage === "/registr-cloud/" ||
+        currentPage === "/registr-cloud/step3"
           ? "main-container"
           : "main-container high"
       }
     >
       <Routes>
-        <Route path="/registr/" element={<Main />} />
-        <Route path="/registr/step1" element={<Step1 />} />
-        <Route path="/registr/step2" element={<Step2 />} />
-        <Route path="/registr/step3" element={<Step3 />} />
+        <Route path="/registr-cloud/" element={<Main />} />
+        <Route path="/registr-cloud/step1" element={<Step1 />} />
+        <Route path="/registr-cloud/step2" element={<Step2 />} />
+        <Route path="/registr-cloud/step3" element={<Step3 />} />
       </Routes>
     </div>
   );

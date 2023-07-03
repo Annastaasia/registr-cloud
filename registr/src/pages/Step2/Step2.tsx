@@ -116,8 +116,8 @@ const SecondLevel: React.FC = () => {
       </div>
 
       <Buttons
-        pathToBack={"/registr/step1"}
-        pathToNext={"/registr/step3"}
+        pathToBack={"/registr-cloud/step1"}
+        pathToNext={"/registr-cloud/step3"}
         isFormCompleted={isFormCompleted}
       />
     </div>
