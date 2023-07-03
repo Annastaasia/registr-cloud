@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "./buttons.module.scss";
+import "./buttons.scss";
 
 const Buttons: React.FC<IButtons> = ({
   pathToBack,
@@ -27,14 +27,14 @@ const Buttons: React.FC<IButtons> = ({
     <div
       className={isSending ? "back-next-buttons sending" : "back-next-buttons"}
     >
-      <button onClick={() => navigate(pathToBack)}>Назад</button>
+      <button onClick={() => navigate(pathToBack)}>Back</button>
 
       {pathToNext && isFormCompleted && (
-        <button onClick={() => navigate(pathToNext)}>Далее</button>
+        <button onClick={() => navigate(pathToNext)}>Continue</button>
       )}
 
       {isDone && isFormCompleted && (
-        <button onClick={() => startSendProcess!()}>Отправить</button>
+        <button onClick={() => startSendProcess!()}>Send</button>
       )}
     </div>
   );

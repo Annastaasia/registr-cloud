@@ -8,9 +8,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useActions } from "../../store/action";
 import { useForm } from "react-hook-form";
 import Input from "@mui/material/Input";
-import "./step1.module.scss";
+import style from "./step1.module.scss";
 
-const FirstLevel: React.FC = () => {
+const Step1: React.FC = () => {
   const { nickname, name, surname, sex } = useAppSelector(
     (state) => state.user
   );
@@ -72,10 +72,10 @@ const FirstLevel: React.FC = () => {
   }, [location]);
 
   return (
-    <div className="fullName-wrapper">
+    <div className={style.wrapper}>
       <ProgressBar />
 
-      <div className="name-surname-sex-inputs">
+      <div className={style.inputs}>
         <InfoInputs>
           <form onSubmit={handleSubmit(onSubmit)}>
             <span>
@@ -83,7 +83,7 @@ const FirstLevel: React.FC = () => {
               <Input {...register("nickname")} placeholder="Введите nickname" />
 
               {errors.nickname && (
-                <p className="error">{errors.nickname.message}</p>
+                <p className={style.error}>{errors.nickname.message}</p>
               )}
             </span>
 
@@ -91,7 +91,9 @@ const FirstLevel: React.FC = () => {
               <p>Name</p>
               <Input {...register("name")} placeholder="Введите name" />
 
-              {errors.name && <p className="error">{errors.name.message}</p>}
+              {errors.name && (
+                <p className={style.error}>{errors.name.message}</p>
+              )}
             </span>
 
             <span>
@@ -99,7 +101,7 @@ const FirstLevel: React.FC = () => {
               <Input {...register("surname")} placeholder="Введите surname" />
 
               {errors.surname && (
-                <p className="error">{errors.surname.message}</p>
+                <p className={style.error}>{errors.surname.message}</p>
               )}
             </span>
 
@@ -109,16 +111,18 @@ const FirstLevel: React.FC = () => {
               <Select
                 value={selectedOption}
                 options={selectOptions}
-                className="select"
+                className={style.select}
                 onChange={(e) => handleSelectChange(e)}
                 placeholder="Выберите пол"
               />
 
-              {errors.sex && <p className="error">{errors.sex.message}</p>}
+              {errors.sex && (
+                <p className={style.error}>{errors.sex.message}</p>
+              )}
             </span>
 
-            <div className="save-form-button">
-              <button type="submit">Сохранить</button>
+            <div className={style.button}>
+              <button type="submit">Save</button>
             </div>
           </form>
         </InfoInputs>
@@ -133,4 +137,4 @@ const FirstLevel: React.FC = () => {
   );
 };
 
-export default FirstLevel;
+export default Step1;

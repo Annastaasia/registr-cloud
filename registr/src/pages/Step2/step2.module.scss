@@ -4,10 +4,10 @@
   }
 }
 
-.avantages-wrapper {
+.avantages_wrapper {
   position: relative;
 
-  .advantages-inputs {
+  .inputs {
     display: flex;
     flex-direction: column;
     padding-top: 80px;
@@ -50,7 +50,7 @@
       cursor: pointer;
     }
 
-    .add-button {
+    .add_button {
       button {
         margin-top: 12px;
         border: 1px solid #5558fa;
@@ -71,7 +71,7 @@
     }
   }
 
-  .checkbox-group {
+  .checkbox {
     padding-top: 40px;
     margin-right: 110px;
     margin-left: 86px;
@@ -118,14 +118,14 @@
       }
     }
 
-    .checkbox-row {
+    .row {
       margin-top: 8px;
       display: flex;
       align-items: center;
     }
   }
 
-  .radio-group {
+  .radio {
     padding-top: 40px;
     margin-right: 110px;
     margin-left: 86px;
@@ -172,7 +172,7 @@
       }
     }
 
-    .radiogroup-row {
+    .row {
       margin-top: 8px;
       display: flex;
       align-items: center;

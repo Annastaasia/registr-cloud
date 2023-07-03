@@ -1,45 +1,53 @@
 @mixin tablet {
-    @media screen and (max-width: 768px) {
-      @content;
-    }
+  @media screen and (max-width: 768px) {
+    @content;
   }
-  
-  .about-wrapper {
+}
+
+.wrapper {
+  position: relative;
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    margin-right: 110px;
+    margin-left: 86px;
+    padding-left: 24px;
     position: relative;
-  
-    .about-section {
-      display: flex;
-      flex-direction: column;
-      padding-top: 80px;
-      margin-right: 110px;
-      margin-left: 86px;
-      padding-left: 24px;
-      position: relative;
-  
-      @include tablet {
-        margin-left: 18px;
-        width: calc(100% - 80px);
+
+    @include tablet {
+      margin-left: 18px;
+      width: calc(100% - 80px);
+    }
+
+    p {
+      padding-bottom: 8px;
+    }
+
+    textarea {
+      border: 1px solid #d3d1d1;
+      resize: vertical;
+      outline: none;
+      background: none;
+      height: 84px;
+      padding-left: 10px;
+      border-radius: 4px;
+
+      &:hover {
+        outline-color: #000;
       }
-  
-      p {
-        padding-bottom: 8px;
-      }
-  
-      textarea {
-        border: 1px solid #d3d1d1;
-        resize: vertical;
-        outline: none;
-        background: none;
-        height: 84px;
-        padding-left: 10px;
-      }
-  
-      span {
-        position: absolute;
-        right: 5px;
-        bottom: -30px;
-        color: #666;
+
+      &:focus {
+        outline: 2px solid #5558fa;
       }
     }
+
+    span {
+      position: absolute;
+      right: 5px;
+      bottom: -30px;
+      color: #666;
+    }
   }
-  
+}

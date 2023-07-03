@@ -1,0 +1,121 @@
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.modal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal {
+    width: 40vw;
+    height: 312px;
+    border-radius: 12px;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(
+        0deg,
+        rgba(103, 80, 164, 0.05),
+        rgba(103, 80, 164, 0.05)
+      ),
+      #fffbfe;
+
+    @include tablet {
+      width: 70vw;
+    }
+
+    .modal-content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 32px;
+      height: calc(100% - 32px);
+
+      .title {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 42px;
+        width: calc(100% - 32px);
+
+        p {
+          font-family: "SB Sans Interface";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 26px;
+          color: #333333;
+
+          @include tablet {
+            font-size: 16px;
+          }
+        }
+
+        img {
+          cursor: pointer;
+        }
+
+        button {
+          display: none;
+        }
+
+        &.error {
+          justify-content: space-between;
+        }
+      }
+
+      .result-pic {
+        background: rgba(5, 174, 113, 0.15);
+        height: 80px;
+        width: 80px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.error {
+          background: rgba(232, 78, 88, 0.15);
+        }
+      }
+
+      .back-button {
+        position: absolute;
+        bottom: 32px;
+
+        button {
+          height: 44px;
+          width: 109px;
+          background: #5558fa;
+          border: none;
+          color: #fff;
+          border-radius: 4px;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+
+        &.error {
+          right: 32px;
+        }
+      }
+    }
+  }
+}

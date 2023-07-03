@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useAppSelector } from "../../hooks/selector";
 import { useActions } from "../../store/action";
 import Input from "@mui/material/Input";
-import "./step2.module.scss";
+import style from "./step2.module.scss";
 
 const SecondLevel: React.FC = () => {
   const [isFormCompleted] = useState<boolean>(true);
@@ -36,10 +36,10 @@ const SecondLevel: React.FC = () => {
   }, [location]);
 
   return (
-    <div className="avantages-wrapper">
+    <div className={style.avantages_wrapper}>
       <ProgressBar />
 
-      <div className="advantages-inputs">
+      <div className={style.inputs}>
         <p>Advantages</p>
 
         {advantages.map((input, index) => (
@@ -56,7 +56,7 @@ const SecondLevel: React.FC = () => {
           </div>
         ))}
 
-        <div className="add-button">
+        <div className={style.add_button}>
           {advantages.length !== 3 && (
             <button onClick={handleAddInput}>
               <img src={plus_icon} alt="" />
@@ -65,12 +65,12 @@ const SecondLevel: React.FC = () => {
         </div>
       </div>
 
-      <div className="checkbox-group">
+      <div className={style.checkbox}>
         <p>Checkbox group</p>
 
         {Array.isArray(checkboxGroup) &&
           checkboxGroup.map((input, index) => (
-            <div key={index} className="checkbox-row">
+            <div key={index} className={style.row}>
               <input
                 type="checkbox"
                 id={`checkbox${index + 1}`}
@@ -89,12 +89,12 @@ const SecondLevel: React.FC = () => {
           ))}
       </div>
 
-      <div className="radio-group">
+      <div className={style.radio}>
         <p>Radio group</p>
 
         {Array.isArray(radioGroup) &&
           radioGroup.map((input, index) => (
-            <div key={index} className="radiogroup-row">
+            <div key={index} className={style.row}>
               <input
                 type="radio"
                 id={`radio${index + 1}`}

@@ -4,10 +4,10 @@
   }
 }
 
-.fullName-wrapper {
+.wrapper {
   position: relative;
 
-  .name-surname-sex-inputs {
+  .inputs {
     margin-right: 110px;
     margin-left: 86px;
     padding-top: 50px;
@@ -23,6 +23,25 @@
 
       @include tablet {
         width: calc(80%);
+      }
+    }
+  }
+
+  .button {
+    padding-top: 40px;
+
+    button {
+      background: #5558fa;
+      border: none;
+      height: 44px;
+      width: 79px;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.9;
       }
     }
   }

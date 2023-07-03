@@ -47,11 +47,11 @@ const Main: React.FC = () => {
     <>
       <div className={style.user_header}>
         <div className={style.user_avatar}>
-          <div className={style.avatar}>АВ</div>
+          <div className={style.avatar}>AS</div>
         </div>
 
         <div className={style.user_info}>
-          <p className={style.user_p}>Анастасия Шитенкова</p>
+          <p className={style.user_p}>Anastasiia Shitenkova</p>
 
           <div className={style.user_links}>
             <Link to={LINKS.telegram} target="_blank" className={style.link}>
@@ -75,7 +75,7 @@ const Main: React.FC = () => {
       <InfoInputs>
         <form onSubmit={handleSubmit(onSubmit)}>
           <span>
-            <p className={style.p_number}>Номер телефона</p>
+            <p className={style.p_number}>Number</p>
             <Input
               {...register("phone")}
               placeholder="+7 (999) 999-99-99"
@@ -96,7 +96,7 @@ const Main: React.FC = () => {
 
           <div className={style.start_button}>
             <button type="submit" className={style.button}>
-              Начать
+              Lets go
             </button>
           </div>
         </form>

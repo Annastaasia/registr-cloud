@@ -5,9 +5,9 @@ import { useSendDataMutation } from "../../store/user.api";
 import { useAppSelector } from "../../hooks/selector";
 import { useNavigate } from "react-router-dom";
 import { useActions } from "../../store/action";
-import "./step3.module.scss";
+import style from "./step3.module.scss";
 
-const ThirdLevel: React.FC = () => {
+const Step3: React.FC = () => {
   const navigate = useNavigate();
 
   const [isFormCompleted] = useState<boolean>(true);
@@ -33,7 +33,7 @@ const ThirdLevel: React.FC = () => {
 
   const handleDone = () => {
     setIsModalOpen(false);
-    navigate("/");
+    navigate("/registr");
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -81,24 +81,24 @@ const ThirdLevel: React.FC = () => {
   }, [location]);
 
   return (
-    <div className="about-wrapper">
+    <div className={style.wrapper}>
       <ProgressBar />
 
-      <div className="about-section">
+      <div className={style.about}>
         <p>About</p>
 
         <textarea
-          placeholder="Начните печатать..."
+          placeholder="Start typing..."
           value={about}
           onChange={handleInputChange}
           ref={aboutRef}
         />
 
-        <span className="character-counter">{characterCount} / 200</span>
+        <span className={style.counter}>{characterCount} / 200</span>
       </div>
 
       <Buttons
-        pathToBack={"/front-cc-project/second-level"}
+        pathToBack={"/registr/step2"}
         isDone={true}
         isFormCompleted={isFormCompleted}
         startSendProcess={startSendProcess}
@@ -132,14 +132,15 @@ const ThirdLevel: React.FC = () => {
         <Modal>
           <div className="modal-content">
             <div className="title">
-              <p>{data?.message}</p>
+              {/* <p>{data?.message}</p> */}
+              <p>The form has been successfully submitted</p>
             </div>
 
             <div className="result-pic">
               <img src={success_icon} alt="" />
             </div>
             <div className="back-button">
-              <button onClick={() => handleDone()}>На главную</button>
+              <button onClick={() => handleDone()}>To the main page</button>
             </div>
           </div>
         </Modal>
@@ -148,4 +149,4 @@ const ThirdLevel: React.FC = () => {
   );
 };
 
-export default ThirdLevel;
+export default Step3;
